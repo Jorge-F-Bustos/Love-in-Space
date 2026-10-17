@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#09051e" />
+  <title>Amor en el espacio | Nuestro pequeño universo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@500;600;700&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/overrides.css" />
+  <script type="importmap">
+    {"imports":{"three":"https://unpkg.com/three@0.170.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.170.0/examples/jsm/"}}
+  </script>
+</head>
+<body>
+  <main id="app" aria-label="Nuestro pequeño universo">
+    <div id="scene-container"></div>
+    <div class="vignette"></div>
+
+    <section id="loading-screen" class="screen-layer" aria-live="polite">
+      <div class="loader-mark">✦</div>
+      <p>Preparando nuestro pequeño universo...</p>
+      <div class="loading-line"><span></span></div>
+    </section>
+
+    <section id="intro-screen" class="screen-layer is-hidden">
+      <div class="intro-copy">
+        <span class="eyebrow">ꨄ︎ FELIZ MESESITO AMORCITO ꨄ︎</span>
+        <h1>Nuestro pequeño<br><em>universo</em></h1>
+        <p>Un pequeño lugar hecho solo para ti <span class="heart">♡</span></p>
+        <button id="enter-button" class="magic-button">ENTRAR<span>✦</span></button>
+        <small>Busca un rincón tranquilo. Hay recuerdos esperándote.</small>
+      </div>
+      <div class="intro-orbit orbit-one"></div><div class="intro-orbit orbit-two"></div>
+    </section>
+
+    <div id="hud" class="is-hidden">
+      <div class="brand-mark"><span>✦</span> TE AMO 𑣲⋆｡˚</div>
+      <div class="hint" id="hint"><strong>Explora libremente</strong><span>W A S D — Mover · Ratón — Mirar · Clic — Recuerdo</span></div>
+      <button id="music-toggle" class="hud-button" aria-label="Activar o desactivar música">🔇 <span>Música inactiva</span></button>
+    </div>
+    <div id="look-help" class="look-help is-hidden">Haz clic para mirar alrededor</div>
+    <div id="mobile-controls" class="is-hidden" aria-label="Controles móviles">
+      <div id="look-area" aria-label="Área táctil para mirar"></div>
+      <div id="joystick" class="joystick" aria-label="Joystick para moverte"><div class="joystick-knob"></div></div>
+      <div class="look-label"></div>
+      <button class="vertical-button up" data-axis="up" aria-label="Subir">↑</button>
+      <button class="vertical-button down" data-axis="down" aria-label="Bajar">↓</button>
+    </div>
+    <div id="memory-toast" class="memory-toast is-hidden"></div>
+  </main>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
