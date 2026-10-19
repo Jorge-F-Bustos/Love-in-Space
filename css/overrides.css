@@ -1,16 +1,37 @@
 /* Ajustes sutiles para que el control musical permanezca accesible. */
+
+/* #hud crea su propio contexto de apilado (position:fixed + z-index). Si el
+   contenedor se queda por debajo de las capas interactivas (área táctil,
+   joystick, botones de subir/bajar), el botón de música aparece tapado aunque
+   tenga un z-index alto, porque un hijo nunca puede superar a su contenedor.
+   Se eleva #hud por encima del lienzo 3D y del resto de la interfaz; como
+   #hud usa pointer-events:none, la escena sigue recibiendo los clics normales. */
+#hud {
+  z-index: 30;
+}
+
 .hud-button {
-  top: 20px;
-  right: 20px;
+  pointer-events: auto;
+  position: fixed;
+  z-index: 31;
+  top: calc(20px + env(safe-area-inset-top, 0px));
+  right: calc(20px + env(safe-area-inset-right, 0px));
   border: 2px solid #130c35;
   background: #ffafd0;
   color: #130c35;
   font-weight: 700;
   box-shadow: 0 4px 0 #130c35, 0 0 22px rgba(255, 166, 207, .28);
   transition: transform .2s, box-shadow .2s;
+  /* El toque controla solo el botón: no inicia el gesto de mirar/mover. */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 .hud-button:hover { transform: translateY(-2px) rotate(-1deg); box-shadow: 0 6px 0 #130c35, 0 0 30px rgba(255, 166, 207, .5); }
 .hud-button:active { transform: translateY(2px); box-shadow: 0 2px 0 #130c35; }
+/* Mientras el HUD está oculto (carga y portada) el botón no debe capturar
+   pulsaciones destinadas a la pantalla de entrada. */
+#hud.is-hidden .hud-button { pointer-events: none; }
+
 .vertical-button {
   user-select: none;
   -webkit-user-select: none;
@@ -21,5 +42,9 @@
   touch-action: none;
 }
 @media (max-width: 700px) {
-  .hud-button { top: 18px; right: 18px; bottom: auto; }
+  .hud-button {
+    top: calc(18px + env(safe-area-inset-top, 0px));
+    right: calc(18px + env(safe-area-inset-right, 0px));
+    bottom: auto;
+  }
 }

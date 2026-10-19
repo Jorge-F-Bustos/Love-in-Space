@@ -31,7 +31,7 @@ export const memories = [
   { id:'memory-11', type:'photo', image:'assets/images/photo10.png', caption:'Nuestro arte es el mejor (⁎˃ᴗ˂⁎)', position:{x:-12.03,y:13.18,z:19.44}, rotation:{x:0,y:0,z:-.04}, frame:'polaroid', textStyle:'leyenda-vino' },
   { id:'memory-12', type:'photo', image:'assets/images/photo11.png', caption:'Siempre juntitos ꒰>ヮ<꒱', position:{x:23.4,y:-12.58,z:-0.59}, rotation:{x:0,y:0,z:.05}, frame:'cosmic', textStyle:'leyenda-crema' },
   { id:'memory-13', type:'photo', image:'assets/images/photo12.png', caption:'LOVIUUUUUUUU ⸜(｡˃ ᵕ ˂ )⸝♡', position:{x:-21.98,y:-14.25,z:3.92}, rotation:{x:0,y:0,z:-.03}, frame:'heart', textStyle:'leyenda-rosa' },
-  { id:'memory-14', type:'photo', image:'assets/images/photo25.png', caption:'', position:{x:2.69,y:-13.58,z:21.5}, rotation:{x:0,y:0,z:.04}, frame:'pink', textStyle:'leyenda-champan' },
+  { id:'memory-14', type:'photo', image:'assets/images/photo25.png', caption:'Hacemos un gran team\nღ´͈ ᵕ `͈ )♡⃛(´͈ ᵕ `͈ ღ', position:{x:2.69,y:-13.58,z:21.5}, rotation:{x:0,y:0,z:.04}, frame:'pink', textStyle:'leyenda-champan' },
   { id:'memory-15', type:'photo', image:'assets/images/photo13.png', caption:'ÑAÑAÑAÑAÑAÑAÑAÑA ⌯>ᴗ<⌯♡', position:{x:-0.95,y:10.37,z:-22.2}, rotation:{x:0,y:0,z:-.05}, frame:'polaroid', textStyle:'leyenda-lila' },
   { id:'memory-16', type:'photo', image:'assets/images/photo14.png', caption:'TE KIEROOOOO ･ﾟ･(｡>ω<｡)･ﾟ･', position:{x:3.05,y:5.32,z:8.64}, rotation:{x:0,y:0,z:.02}, frame:'cosmic', textStyle:'leyenda-crema' },
   { id:'memory-17', type:'photo', image:'assets/images/photo15.png', caption:'Somos el mejor dúo \n(ɔ ˘⌣˘)˘⌣˘ c)', position:{x:-10.4,y:-2.29,z:-0.93}, rotation:{x:0,y:0,z:-.02}, frame:'heart', textStyle:'leyenda-ciruela' },
